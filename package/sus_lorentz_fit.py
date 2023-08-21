@@ -32,7 +32,7 @@ class Susceptibility_Lorentz_Fit:
         ax1.legend()
         plt.show()
 
-#ローレンツ関数と複素感受率の虚部のピークの大きさをあわせる
+#ローレンツ関数と複素感受率の虚部のピークの大きさをあわせる.形が変だと上手く機能しない
     def adjust_peak(self):
         if self.sus_imag['p'].max() >= 0: #副格子1の右回り+の磁気感受率の虚部の最大値が正かどうかで場合分け
             self.peak_ratio1 = self.Lorentz['L1'].max()/abs(self.sus_imag['p'].max())
